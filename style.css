@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Adding a floating animation to the background */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Container Styles */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out, float 6s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Title Styles */
+.title {
+    color: #ecf0f1;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styles */
+.button {
+    width: 140px;
+    margin: 15px;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Colors */
+#rock {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+#paper {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: #fff;
+}
+
+#scissors {
+    background: linear-gradient(to right, #f1c40f, #f39c12);
+    color: #fff;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
